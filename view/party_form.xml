@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<data>
+    <xpath
+        expr="/form/group/field[@name='active']"
+        position="after">
+        <label name="asociada" string="Es Asociada"/>
+        <field name="asociada" xexpand="0" width="25"/>
+    </xpath>
+   
+    <xpath
+        expr="/form/notebook/page[@id=&quot;accounting&quot;]/field[@name=&quot;vat_number&quot;]"
+        position="after">
+            <label name="iva_condition" colspan="2"/>
+            <field name="iva_condition" colspan="2"/>
+            <newline/>
+    </xpath>
+
+    <xpath
+        expr="/form/notebook/page[@id='accounting']"
+        position="after">
+        <page string="Cuotas de Asociada" id="cuotas_asociada" col="6" states="{'invisible': Not(Bool(Eval('asociada')))}">
+            <label name="monto_actual_cuota" string="Monto Actual de la Cuota"/>
+            <field name="monto_actual_cuota"/>
+            <newline />
+            <field name="cuotas" mode="tree,form" colspan="6"
+            view_ids="asociadas.cuota_view_tree,asociadas.cuota_view_form" yexpand="1" height="100" string="Cuotas de la asociada"/>
+        </page>
+    </xpath>
+    <xpath
+        expr="/form/notebook/page[@id='accounting']"
+        position="after">
+        <page string="Cuotas de Prestamos" id="cuota_prestamos" col="6" states="{'invisible': Not(Bool(Eval('asociada')))}">
+            <field name="cuotaprestamos" mode="tree,form" colspan="6"
+            view_ids="asociadas.cuotaprestamo_view_tree,asociadas.cuotaprestamo_view_form" yexpand="1" height="100" string="Cuotas de Prestamos"/>
+        </page>
+    </xpath>
+
+</data>

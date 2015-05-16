@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tryton>
+    <data>
+        <!-- Forms y trees --> 
+        <record model="ir.ui.view" id="cuota_view_form">
+            <field name="model">asociadas.cuota</field>
+            <field name="type">form</field>
+            <field name="name">cuota_form</field>
+        </record>
+        <record model="ir.ui.view" id="cuota_view_tree">
+            <field name="model">asociadas.cuota</field>
+            <field name="type">tree</field>
+            <field name="name">cuota_tree</field>
+        </record>
+    </data>
+</tryton>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Cuotas de la asociada">
+    <field name="mes"/>
+    <field name="anio"/>
+    <field name="monto"/>
+    <field name="pagada"/>
+</tree>

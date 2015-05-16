@@ -1,0 +1,20 @@
+<tryton>
+    <data>
+        <record model="ir.action.report" id="report_recibocuota">
+            <field name="active" eval="True"/>
+            <field name="name">Recibo de Cobranza</field>
+            <field name="model">asociadas.cuota</field>
+            <field name="report_name">asociadas.cuota</field>
+            <field name="report">recibocuota.odt</field>
+            <field name="style">header_A4.odt</field>
+            <field name="template_extension">odt</field>
+            <field name="extension">pdf</field>
+        </record>
+
+        <record model="ir.action.keyword" id="report_recibocuota_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">asociadas.cuota,-1</field>
+            <field name="action" ref="report_recibocuota"/>
+        </record>
+    </data>
+</tryton>

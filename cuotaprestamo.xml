@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tryton>
+    <data>
+        <!-- Forms y trees --> 
+        <record model="ir.ui.view" id="cuotaprestamo_view_form">
+            <field name="model">asociadas.cuotaprestamo</field>
+            <field name="type">form</field>
+            <field name="name">cuotaprestamo_form</field>
+        </record>
+        <record model="ir.ui.view" id="cuotaprestamo_view_tree">
+            <field name="model">asociadas.cuotaprestamo</field>
+            <field name="type">tree</field>
+            <field name="name">cuotaprestamo_tree</field>
+        </record>
+    
+
+        <!--Wizard-->
+        <record model="ir.action.wizard" id="wizard_creacion_cuotas_prestamo">
+            <field name="name">Creacion de las cuotas de un prestamo</field>
+            <field name="wiz_name">asociadas.creacion_cuotas_prestamo</field>
+        </record>
+
+        <!--keyword wizard-->
+        <record model="ir.action.keyword" id="act_open_creacion_cuotas_prestamo">
+            <field name="keyword">form_action</field>
+            <field name="model">asociadas.cuotaprestamo,-1</field>
+            <field name="action" ref="wizard_creacion_cuotas_prestamo"/>
+        </record>
+
+        <record model="ir.ui.view" id="view_creacion_form">
+            <field name="model">asociadas.creacion_cuotas_prestamo.start</field>
+            <field name="type">form</field>
+            <field name="name">creacion_form</field> 
+        </record>
+
+        <menuitem action="wizard_creacion_cuotas_prestamo" id="menu_creacion_cuotas_prestamo"/>
+    </data>
+</tryton>

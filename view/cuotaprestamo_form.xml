@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form string="Cuota Prestamo" col="6">
+    <label name="mes"/>
+    <field name="mes"/>
+    <label name="anio"/>
+    <field name="anio"/>
+    <label name="monto"/>
+    <field name="monto"/>
+    <label name="cantidad_cuotas"/>
+    <field name="cantidad_cuotas"/>
+    <label name="interes"/>
+    <field name="interes"/>
+    <label name="porcentaje_interes"/>
+    <field name="porcentaje_interes"/>
+    <label name="monto_total_prestamo"/>
+    <field name="monto_total_prestamo"/>
+    <label name="cantidad_cuotas"/>
+    <field name="cantidad_cuotas"/>
+    <label name="mes_primera_cuota"/>
+    <field name="mes_primera_cuota"/>
+    <label name="anio_primera_cuota"/>
+    <field name="anio_primera_cuota"/>
+    <label name="fecha_vencimiento"/>
+    <field name="fecha_vencimiento"/>
+    <label name="fecha_pago"/>
+    <field name="fecha_pago"/>
+    <label name="pagada"/>
+    <field name="pagada"/>
+    <label name="cuenta_debito"/>
+    <field name="cuenta_debito"/>
+    <label name="cuenta_credito"/>
+    <field name="cuenta_credito"/>
+</form>
