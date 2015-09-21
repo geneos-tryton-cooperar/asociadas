@@ -95,9 +95,8 @@ class CreacionCuotasPrestamo(Wizard):
 
         accounting_date = Date.today()
         company = Transaction().context.get('company')
-        period_id = Period.find(company, date=accounting_date)
-        #journal = Transaction().context.get('journal')
-        journal_id = 1 #Revenue - Ver cual va en Cooperar
+        period_id = Period.find(company, date=accounting_date)        
+        journal_id = 8 #Pagos
        
             
         Sequence = Pool().get('ir.sequence')
